@@ -1,14 +1,13 @@
-﻿using CORE.APP.Domain;
+﻿using CORE.APP.Models;
 
-namespace APP.Domain
+namespace APP.Models
 {
-    public class User : Entity
+    public class UserRequest : Request
     {
         public string UserName { get; set; }
         public string Password { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
-        public Genders Gender { get; set; }
         public DateTime? BirthDate { get; set; }
         public DateTime RegistrationDate { get; set; }
         public decimal Score { get; set; }
@@ -17,13 +16,5 @@ namespace APP.Domain
         public int? CountryId { get; set; }
         public int? CityId { get; set; }
         public int? GroupId { get; set; }
-    }
-
-    public enum Genders
-    {
-        Unknown = 0,
-        Male = 1,
-        Female = 2,
-        Other = 3
     }
 }
